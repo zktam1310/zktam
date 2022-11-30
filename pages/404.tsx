@@ -18,6 +18,10 @@ export default function NotFound() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <main>
+        Moving on...
+      </main>
+
     </div>
   )
 }

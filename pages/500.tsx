@@ -6,10 +6,6 @@ import styles from '../styles/Home.module.css'
 export default function ServerError() {
   const router = useRouter();
 
-  useEffect(() => {
-    router.push('/');
-  }, []);
-
   return (
     <div className={styles.container}>
       <Head>
@@ -17,6 +13,10 @@ export default function ServerError() {
         <meta name="description" content="Cliché? Touché!" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <main>
+        Something's wrong with the server... but the sun still rises.
+      </main>
 
     </div>
   )
