@@ -15,7 +15,7 @@ export default function ServerError() {
       </Head>
 
       <main>
-        Something's wrong with the server... but the sun still rises.
+        Something{"'s"} wrong with the server... but the sun still rises.
       </main>
 
     </div>

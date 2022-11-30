@@ -7,7 +7,7 @@ export default function Layout({ children }: React.PropsWithChildren<{}>) {
     <>
       <main className="main">{children}</main>
       <footer className="footer">
-        {current_year} 	&#169; the streets, alleys, corners of the bars
+        {current_year} &#169; the streets, alleys, corners of the bars
       </footer>
     </>
   )
