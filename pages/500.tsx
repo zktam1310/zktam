@@ -9,7 +9,7 @@ export default function ServerError() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Cliché? Touché!</title>
+        <title>cliché? touché!</title>
         <meta name="description" content="Cliché? Touché!" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

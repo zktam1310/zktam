@@ -13,8 +13,8 @@ export default function NotFound() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Cliché? Touché!</title>
-        <meta name="description" content="Cliché? Touché!" />
+        <title>cliché? touché!</title>
+        <meta name="description" content="cliché? touché!" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
