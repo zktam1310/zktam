@@ -18,16 +18,16 @@ a {
   box-sizing: border-box;
 }
 
-.container {
+.max-width-container {
   padding: 0 2rem;
+  max-width: 2080px;
 }
 
 .main {
   min-height: 90vh;
-  padding: 4rem 0;
-  flex: 1;
+  padding: 2rem 0;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
