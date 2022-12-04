@@ -21,7 +21,7 @@ export default function Home() {
       <main className={styles.main}>
         <span style={{ fontStyle: "italic" }}>life life life</span>
         <div className={styles.youtube_embed}>
-          <iframe src={`https://www.youtube.com/embed/NwVtIPeYIeQ?autoplay=1&origin=${origin}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" allowFullScreen="True"></iframe>
+          <iframe src={`https://www.youtube.com/embed/NwVtIPeYIeQ?autoplay=1&origin=${origin}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" allowFullScreen></iframe>
         </div>
       </main>
     </div>
