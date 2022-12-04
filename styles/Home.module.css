@@ -1,1 +1,23 @@
+.main {
+    text-align: center;
+}
 
+.youtube_embed {
+    text-align: center;
+    margin-top: 20px;
+    max-width: 100%;
+}
+
+.youtube_embed iframe {
+    width: 700px;
+    height: 400px;
+    max-width: 100%;
+}
+
+
+@media only screen
+    and (max-device-width: 450px) {
+        .youtube_embed iframe {
+            height: 200px;
+        }
+    }
