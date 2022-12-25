@@ -1,5 +1,5 @@
 .main {
-    @apply text-center;
+    @apply text-center italic;
 }
 
 .youtube_embed {
