@@ -1,0 +1,14 @@
+.main {
+    @apply text-center;
+}
+
+.btn {
+    @apply p-1 bg-gray-300 text-white rounded-md mb-3;
+    line-height: 1;
+}
+
+.input {
+    @apply text-center;
+    line-height: 1;
+    border-bottom: 1px solid #000;
+}

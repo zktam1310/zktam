@@ -1,10 +1,9 @@
 .main {
-    text-align: center;
+    @apply text-center italic;
 }
 
 .youtube_embed {
-    text-align: center;
-    margin-top: 20px;
+    @apply text-center mt-10;
     max-width: 100%;
 }
 
