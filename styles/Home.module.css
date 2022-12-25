@@ -3,8 +3,7 @@
 }
 
 .youtube_embed {
-    @apply text-center;
-    margin-top: 20px;
+    @apply text-center mt-10;
     max-width: 100%;
 }
 
