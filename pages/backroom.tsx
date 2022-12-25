@@ -26,11 +26,13 @@ async function submitNewStream(e: React.KeyboardEvent<HTMLInputElement>) {
     "https://www.youtube.com/watch?v="
   ];
 
-  if (!streamBaseUrls.some((url) => e.target?.value.includes(url))) return;
+  const target = e.target as HTMLTextAreaElement;
 
-  const current_base_url = (streamBaseUrls.filter((url) => e.target?.value.includes(url)))[0];
+  if (!streamBaseUrls.some((url) => target.value.includes(url))) return;
 
-  let video_id = (e.target?.value.split(current_base_url))[1];
+  const current_base_url = (streamBaseUrls.filter((url) => target.value.includes(url)))[0];
+
+  let video_id = (target.value.split(current_base_url))[1];
   let now: any = dayjs.utc().format();
   await fetch("/api/streams", {
     method: "POST",
@@ -99,7 +101,7 @@ export default function Home() {
         <div>
           <button
             className={styles.btn}
-            onClick={() => setShowStreamInput(!setShowStreamInput)}>
+            onClick={() => setShowStreamInput(!showStreamInput)}>
             New Stream
           </button>
           {/* <button
