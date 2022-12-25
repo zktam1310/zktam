@@ -37,5 +37,5 @@ a {
 }
 
 .footer {
-  @apply flex flex-wrap justify-center items-center py-7;
+  @apply text-center flex flex-wrap justify-center items-center px-3 py-7;
 }
