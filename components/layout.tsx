@@ -35,7 +35,7 @@ export default function Layout({ children }: React.PropsWithChildren<{}>) {
   return (
     <>
       <Head>
-        <title>I hope you've already had your cup of coffee or tea today.</title>
+        <title>I hope you{"'"}ve already had your cup of coffee or tea today.</title>
         <meta name="description" content="offbéat" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
