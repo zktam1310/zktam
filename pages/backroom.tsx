@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import Head from 'next/head';
 import dayjs from 'dayjs';
 import utc from 'dayjs/plugin/utc';
 import relativeTime from 'dayjs/plugin/relativeTime';
@@ -91,7 +92,9 @@ export default function Home() {
 
   return (
     <div className="max-width-container">
-
+      <Head>
+        <title>Are you a devil in the workshop too?</title>
+      </Head>
       <main className={styles.main}>
         <div>
           <button
