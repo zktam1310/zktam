@@ -24,13 +24,19 @@ function Medias(data: any) {
   if (data.length > 0) {
     return items
   }
-  return <div className="text-center italic">Out of music today, deal with it.</div>
+  return (
+    <>
+      <div className="text-center">It's a new day</div>
+      <div className="text-center not-italic">Start the conversation?</div>
+    </>
+  )
 }
 
 export default function Home() {
 
   const [origin, setOrigin] = useState("");
-  const [sheets, setSheets] = useState([]);
+  const [streams, setStreams] = useState([]);
+  const [loaded, setLoaded] = useState(false);
   const initialRun = useRef(true)
 
   useEffect(() => {
@@ -39,7 +45,8 @@ export default function Home() {
       let now: any = dayjs.utc().format();
       (async () => {
         const results = await fetch(`/api/streams?timestamp=${now}`).then(response => response.json());
-        setSheets(results);
+        setStreams(results);
+        setLoaded(true);
       })();
       initialRun.current = false;
     }
@@ -51,7 +58,11 @@ export default function Home() {
     <div className="max-width-container">
       <main className={styles.main}>
         {/* {Words()} */}
-        {Medias(sheets)}
+        {
+          loaded ?
+          Medias(streams) :
+          <div>spinning..</div>
+        }
       </main>
     </div>
   )
