@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 import { connectToDatabase } from "../../lib/mongodb";
 import dayjs from 'dayjs';
 import utc from 'dayjs/plugin/utc';
+import { ObjectId } from 'mongodb';
 
 dayjs.extend(utc);
 
@@ -61,7 +62,7 @@ export default async function handler(
       } else {
         // remove stream
         results = await streams.deleteOne({
-          id: reqBody.id
+          "_id": new ObjectId(reqBody._id)
         });
       }
       break;
