@@ -17,7 +17,7 @@ function Medias(data: any) {
       key={k}>
       <div className='text-right'>{dayjs(v["timestamp"]).fromNow()}</div>
       <div>
-        <iframe src={`https://www.youtube.com/embed/${v.source_id}?autoplay=1&origin=${origin}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" allowFullScreen></iframe>
+        <iframe src={`https://www.youtube.com/embed/${v.source_id}?origin=${origin}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" allowFullScreen></iframe>
       </div>
     </div>
   );
