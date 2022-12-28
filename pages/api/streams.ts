@@ -14,8 +14,10 @@ async function getStreams(streams: any, timestamp: any) {
   let getStreams:any;
 
   if (timestamp) {
-    const startTs = dayjs.utc(timestamp).startOf('day');
-    const endTs = startTs.endOf('day');
+    // const startTs = dayjs.utc(timestamp).startOf('day');
+    // const endTs = startTs.endOf('day');
+    const endTs = dayjs.utc(timestamp);
+    const startTs = endTs.subtract(1, "day");
     getStreams = await streams.find({
       timestamp: {
         $gte: startTs.format(),
