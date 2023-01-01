@@ -63,16 +63,18 @@ function Medias(data: any) {
 
 export default function Home() {
 
-  const [sheets, setSheets] = useState([]);
+  const [streams, setStreams] = useState([]);
   const [showStreamInput, setShowStreamInput] = useState(false);
   const [showWordInput, setShowWordInput] = useState(false);
+  const [loaded, setLoaded] = useState(false);
   const initialRun = useRef(true)
 
   useEffect(() => {
     if (initialRun.current) {
         (async () => {
           const results = await fetch(`/api/streams`).then(response => response.json());
-          setSheets(results);
+          setStreams(results);
+          setLoaded(true);
         })();
         initialRun.current = false;
     }
@@ -111,7 +113,11 @@ export default function Home() {
           </button> */}
           {renderNewField()}
         </div>
-        {Medias(sheets)}
+        {
+          loaded ?
+          Medias(streams) :
+          <div>spinning..</div>
+        }
       </main>
     </div>
   )
