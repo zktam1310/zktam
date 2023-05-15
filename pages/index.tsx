@@ -61,7 +61,9 @@ export default function Home() {
         {
           loaded ?
           Medias(streams) :
-          <div>spinning..</div>
+          <div>
+            <img src="/ying-running.gif" width={'80px'} />
+          </div>
         }
       </main>
     </div>
