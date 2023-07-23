@@ -25,7 +25,7 @@ function Footer() {
   }, []);
 
   return (
-    <footer className="footer">
+    <footer className="footer yujiBoku">
       {currentYear} &#169; {footer}
     </footer>
   )

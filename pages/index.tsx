@@ -26,8 +26,8 @@ function Medias(data: any) {
   }
   return (
     <>
-      <div className="text-center">It&apos;s a new day</div>
-      <div className="text-center not-italic">Start the conversation?</div>
+      <div className="text-center yujiBoku">It&apos;s a new day</div>
+      <div className="text-center not-italic yujiBoku">Start the conversation?</div>
     </>
   )
 }
